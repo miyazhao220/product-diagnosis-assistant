@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
+  base: '/product-diagnosis-assistant/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -12,5 +13,8 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true
+  },
+  build: {
+    outDir: 'docs'
   }
 })
